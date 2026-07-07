@@ -1,0 +1,191 @@
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.app-header .logo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(0, 120, 212, 0.15);
+  border: 1px solid rgba(0, 120, 212, 0.4);
+  color: var(--azure-blue-light);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.app-header h1 {
+  font-size: 2.4rem;
+  margin: 0 0 0.5rem;
+  background: linear-gradient(90deg, #ffffff, var(--azure-blue-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.app-header p {
+  color: var(--text-muted);
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  padding: 1.5rem;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0, 120, 212, 0.2);
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 8px currentColor;
+}
+
+.status-dot.healthy {
+  background: var(--success);
+  color: var(--success);
+}
+
+.status-dot.unhealthy {
+  background: var(--danger);
+  color: var(--danger);
+}
+
+.status-dot.pending {
+  background: #f5c542;
+  color: #f5c542;
+}
+
+.card-headline {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.card-body-text {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.badge {
+  align-self: flex-start;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(0, 120, 212, 0.2);
+  color: var(--azure-blue-light);
+  border: 1px solid rgba(0, 120, 212, 0.35);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--azure-blue-light);
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.weather-main {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.weather-temp {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.weather-icon {
+  width: 56px;
+  height: 56px;
+}
+
+.error-text {
+  color: var(--danger);
+  font-size: 0.9rem;
+}
+
+.app-footer {
+  text-align: center;
+  margin-top: 3rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.app-footer strong {
+  color: var(--azure-blue-light);
+}
+
+.kv-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.kv-row span:last-child {
+  color: var(--text-primary);
+  font-weight: 600;
+}

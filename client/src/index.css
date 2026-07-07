@@ -1,0 +1,34 @@
+:root {
+  --azure-blue: #0078d4;
+  --azure-blue-light: #50b0ff;
+  --bg-navy-1: #0a1128;
+  --bg-navy-2: #10213f;
+  --bg-navy-3: #0d2b4e;
+  --text-primary: #f2f6fc;
+  --text-muted: #9fb3cc;
+  --success: #3fd67a;
+  --danger: #ff5c6c;
+  --glass-border: rgba(255, 255, 255, 0.12);
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: radial-gradient(circle at 20% -10%, var(--bg-navy-3), transparent 55%),
+    radial-gradient(circle at 100% 0%, #163a63, transparent 45%),
+    linear-gradient(160deg, var(--bg-navy-1) 0%, var(--bg-navy-2) 55%, #08132a 100%);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  min-height: 100vh;
+}
