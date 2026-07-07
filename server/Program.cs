@@ -120,7 +120,8 @@ app.MapGet("/api/weather", async (IHttpClientFactory httpClientFactory, IConfigu
             feelsLike = payload.Main?.FeelsLike,
             humidity = payload.Main?.Humidity,
             description = payload.Weather?.FirstOrDefault()?.Description,
-            icon = payload.Weather?.FirstOrDefault()?.Icon
+            icon = payload.Weather?.FirstOrDefault()?.Icon,
+            windSpeed = payload.Wind?.Speed
         });
     }
     catch (Exception)
@@ -141,6 +142,7 @@ internal sealed class OpenWeatherResponse
 {
     public OpenWeatherMain? Main { get; set; }
     public List<OpenWeatherCondition>? Weather { get; set; }
+    public OpenWeatherWind? Wind { get; set; }
 }
 
 internal sealed class OpenWeatherMain
@@ -156,4 +158,9 @@ internal sealed class OpenWeatherCondition
 {
     public string? Description { get; set; }
     public string? Icon { get; set; }
+}
+
+internal sealed class OpenWeatherWind
+{
+    public double Speed { get; set; }
 }

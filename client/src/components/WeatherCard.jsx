@@ -31,7 +31,10 @@ export default function WeatherCard({ weather, error }) {
           </div>
         </>
       ) : (
-        <p className="card-body-text">{weather.message}</p>
+        <>
+          <span className="badge">Unavailable</span>
+          <p className="card-body-text">{weather.message}</p>
+        </>
       )}
     </div>
   )
